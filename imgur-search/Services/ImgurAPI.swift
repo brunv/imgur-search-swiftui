@@ -12,8 +12,8 @@ let key = "9e6db4ec707f8f3"
 let baseUrl = "https://api.imgur.com/3/gallery/search/top"
 
 class ImgurAPI {
-    
-    func fetchImages(for query: String, completionHandler: @escaping ([Img]) -> ()) {
+       
+    func fetchImages(for query: String, completionHandler: @escaping (ImgResponse) -> ()) {
         let url = buildUrl(for: query)
         let headers: HTTPHeaders = ["Authorization": "Client-ID \(key)"]
         
@@ -22,12 +22,16 @@ class ImgurAPI {
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async {
-                    let imageList = data.data
-                    completionHandler(imageList)
+                    let imageResponse = ImgResponse(success: data.success, error: nil, images: data.data)
+                    completionHandler(imageResponse)
                 }
 
-            case .failure(let error):
-                print(error)
+            case .failure(let data):
+                print(">>> ERROR: \(data)")
+                DispatchQueue.main.async {
+                    let imageResponse = ImgResponse(success: false, error: ImgError.generic, images: [])
+                    completionHandler(imageResponse)
+                }
             }
         }
     }

@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum ImgError: Error {
+    case generic
+    case searchFailed
+}
+
 struct Img: Identifiable, Decodable {
     var id: String
     var link: String
@@ -19,4 +24,12 @@ struct Img: Identifiable, Decodable {
 
 struct ImgData: Decodable {
     var data: [Img]
+    var success: Bool
+    var status: Int
+}
+
+struct ImgResponse {
+    let success: Bool
+    let error: ImgError?
+    let images: [Img]
 }

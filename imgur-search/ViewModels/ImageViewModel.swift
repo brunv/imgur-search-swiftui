@@ -21,17 +21,20 @@ class ImageViewModel: ObservableObject {
     func fetchImages(for search: String) {
         isLoading = true
         ImgurAPI().fetchImages(for: search) { response in
-            self.images = response.filter { img in
-                return img.is_album == false
-            }
-            
             self.isLoading = false
-            
-            if self.images.isEmpty {
-                self.buildErrorMsg()
+            if response.success {
+                self.images = response.images.filter { img in
+                    return img.is_album == false
+                }
+                if self.images.isEmpty {
+                    self.buildErrorMsg(error: .searchFailed)
+                } else {
+                    self.showGallery = true
+                }
             } else {
-                self.showGallery = true
+                self.buildErrorMsg(error: .generic)
             }
+            
         }
     }
     
@@ -41,9 +44,16 @@ class ImageViewModel: ObservableObject {
         feedbackIcon = "binoculars"
     }
     
-    private func buildErrorMsg() {
+    private func buildErrorMsg(error: ImgError) {
         showGallery = false
-        feedbackMsg = "Couldn't find what you're looking for."
-        feedbackIcon = "eyes"
+        
+        switch error {
+        case .generic:
+            feedbackMsg = "Something went wrong. Try again."
+            feedbackIcon = "xmark.icloud"
+        case .searchFailed:
+            feedbackMsg = "Couldn't find what you're looking for."
+            feedbackIcon = "eyes"
+        }
     }
 }
