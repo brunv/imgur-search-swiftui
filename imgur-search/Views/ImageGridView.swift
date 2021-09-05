@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ImageGridView: View {
-    
     let images: [Img]
+    let loadingNextPage: Bool
+    let loadMoreCallback: (String) -> Void
     
     var columns = [
         GridItem(spacing: 0),
@@ -22,15 +23,20 @@ struct ImageGridView: View {
         ScrollView(.vertical) {
             LazyVGrid(columns: columns) {
                 ForEach(images, id: \.id) { img in
-                    ImageThumbnailView(url: img.url)
+                    ImageThumbnailView(id: img.id, url: img.url, loadMoreCallback: loadMoreCallback)
                 }
+                
             }.padding()
+            
+            if loadingNextPage {
+                LoadingIndicator(content: "more")
+            }
         }
     }
 }
 
 struct ImageGridView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageGridView(images: [])
+        ImageGridView(images: [], loadingNextPage: false, loadMoreCallback: {_ in })
     }
 }

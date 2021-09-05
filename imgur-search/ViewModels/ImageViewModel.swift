@@ -8,9 +8,14 @@
 import Foundation
 
 class ImageViewModel: ObservableObject {
+    var pageNumber: Int = 0
+    var previousSearch: String = ""
+    var lastItemID: String? = ""
+    
     @Published var images: [Img] = []
     @Published var showGallery: Bool = false
     @Published var isLoading: Bool = false
+    @Published var loadingNextPage: Bool = false
     @Published var feedbackMsg: String = ""
     @Published var feedbackIcon: String = ""
     
@@ -18,14 +23,43 @@ class ImageViewModel: ObservableObject {
         buildInitialMsg()
     }
     
-    func fetchImages(for search: String) {
-        isLoading = true
-        ImgurAPI().fetchImages(for: search) { response in
+    func fetchImages(for search: String) {        
+        if search != previousSearch {
+            isLoading = true
+            pageNumber = 0
+            images = []
+            fetch(search: search, page: pageNumber)
+        } else {
+            loadingNextPage = true
+            pageNumber += 1
+            fetch(search: search, page: pageNumber)
+        }
+        previousSearch = search
+    }
+    
+    func loadMoreContent(id: String) {
+        if id == lastItemID {
+            fetchImages(for: previousSearch)
+        }
+    }
+    
+    private func fetch(search: String, page: Int) {
+        ImgurAPI().fetchImages(for: search, page: page) { response in
             self.isLoading = false
+            self.loadingNextPage = false
+            
             if response.success {
-                self.images = response.images.filter { img in
+                let filteredImgs = response.images.filter { img in
                     return img.is_album == false
                 }
+                self.lastItemID = filteredImgs.last?.id
+                
+                if self.images.isEmpty {
+                    self.images = filteredImgs
+                } else {
+                    self.images.append(contentsOf: filteredImgs)
+                }
+                
                 if self.images.isEmpty {
                     self.buildErrorMsg(error: .searchFailed)
                 } else {
@@ -34,7 +68,6 @@ class ImageViewModel: ObservableObject {
             } else {
                 self.buildErrorMsg(error: .generic)
             }
-            
         }
     }
     

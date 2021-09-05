@@ -9,8 +9,9 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ImageThumbnailView: View {
-    
+    let id: String
     let url: URL
+    let loadMoreCallback: (String) -> Void
     
     var body: some View {
         NavigationLink(destination: OpenImageView(url: url)) {
@@ -21,6 +22,9 @@ struct ImageThumbnailView: View {
                 .frame(width: 80, height: 80)
                 .clipped()
                 .cornerRadius(8)
+                .onAppear() {
+                    self.loadMoreCallback(id)
+                }
         }
     }
 }
@@ -28,6 +32,6 @@ struct ImageThumbnailView: View {
 
 struct ImageThumbnailView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageThumbnailView(url: URL(string: "")!)
+        ImageThumbnailView(id: "", url: URL(string: "")!, loadMoreCallback: {_ in })
     }
 }

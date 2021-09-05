@@ -13,12 +13,11 @@ let baseUrl = "https://api.imgur.com/3/gallery/search/top"
 
 class ImgurAPI {
        
-    func fetchImages(for query: String, completionHandler: @escaping (ImgResponse) -> ()) {
-        let url = buildUrl(for: query)
+    func fetchImages(for query: String, page: Int, completionHandler: @escaping (ImgResponse) -> ()) {
+        let url = buildUrl(for: query, page: page)
         let headers: HTTPHeaders = ["Authorization": "Client-ID \(key)"]
         
         AF.request(url, headers: headers).responseDecodable(of: ImgData.self) { response in
-
             switch response.result {
             case .success(let data):
                 DispatchQueue.main.async {
@@ -36,7 +35,7 @@ class ImgurAPI {
         }
     }
     
-    func buildUrl(for query: String) -> String {
-        return "\(baseUrl)/0?q=\(query)&q_type=jpg"
+    func buildUrl(for query: String, page: Int) -> String {
+        return "\(baseUrl)/\(page)?q=\(query)&q_type=jpg"
     }
 }

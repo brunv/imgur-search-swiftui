@@ -11,7 +11,6 @@ import SDWebImageSwiftUI
 struct HomeView: View {
     
     @ObservedObject var imageViewModel: ImageViewModel = ImageViewModel()
-    @State var searchBarIsExpanded = false
     @State var search = ""
     
     var body: some View {
@@ -42,7 +41,7 @@ struct HomeView: View {
             if imageViewModel.isLoading {
                 LoadingIndicator(content: search)
             } else if imageViewModel.showGallery {
-                ImageGridView(images: imageViewModel.images)
+                ImageGridView(images: imageViewModel.images, loadingNextPage: imageViewModel.loadingNextPage, loadMoreCallback: {id in imageViewModel.loadMoreContent(id: id)} )
             } else {
                 FeedbackMessage(message: imageViewModel.feedbackMsg, icon: imageViewModel.feedbackIcon)
             }
