@@ -11,7 +11,7 @@ import SwiftUI
 struct imgur_searchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Main().navigationTitle("teste")
         }
     }
 }
