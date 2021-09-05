@@ -16,6 +16,7 @@ struct LoadingIndicator: View {
                 .progressViewStyle(CircularProgressViewStyle())
             Text("Searching for \(content)...")
                 .font(.caption)
+                .padding()
         }
         .frame(maxHeight: .infinity)
     }

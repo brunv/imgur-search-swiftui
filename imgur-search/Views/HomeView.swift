@@ -29,10 +29,12 @@ struct HomeView: View {
                 })
             }.padding()
             
-            if !imageViewModel.showGallery {
+            if imageViewModel.isLoading {
                 LoadingIndicator(content: search)
-            } else {
+            } else if imageViewModel.showGallery {
                 ImageGridView(images: imageViewModel.images)
+            } else {
+                FeedbackMessage(message: imageViewModel.feedbackMsg, icon: imageViewModel.feedbackIcon)
             }
         }
     }
