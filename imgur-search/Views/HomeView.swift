@@ -19,14 +19,24 @@ struct HomeView: View {
             HStack {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.gray)
+                
                 TextField("Search...", text: $search)
-                Button(action: {
-                    imageViewModel.fetchImages(for: self.search)
-                }, label: {
-                    Text("     GO")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(.black)
-                })
+                
+                if !search.isEmpty {
+                    Image(systemName: "xmark")
+                        .onTapGesture {
+                            search = ""
+                        }
+                    
+                    Button(action: {
+                        imageViewModel.fetchImages(for: self.search)
+                    }, label: {
+                        Text("     GO")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.black)
+                    })
+                }
+                
             }.padding()
             
             if imageViewModel.isLoading {
