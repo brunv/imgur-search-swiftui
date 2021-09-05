@@ -29,7 +29,7 @@ struct HomeView: View {
                         }
                     
                     Button(action: {
-                        imageViewModel.fetchImages(for: self.search)
+                        imageViewModel.fetchNewContent(of: self.search)
                     }, label: {
                         Text("     GO")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -42,7 +42,7 @@ struct HomeView: View {
             if imageViewModel.isLoading {
                 LoadingIndicator(content: search)
             } else if imageViewModel.showGallery {
-                ImageGridView(images: imageViewModel.images, loadingNextPage: imageViewModel.loadingNextPage, loadMoreCallback: {id in imageViewModel.loadMoreContent(id: id)} )
+                ImageGridView(images: imageViewModel.images, loadingNextPage: imageViewModel.loadingNextPage, loadMoreCallback: {id in imageViewModel.fetchMoreContent(id: id)} )
             } else {
                 FeedbackMessage(message: imageViewModel.feedbackMsg, icon: imageViewModel.feedbackIcon)
             }

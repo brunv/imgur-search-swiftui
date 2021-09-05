@@ -23,23 +23,19 @@ class ImageViewModel: ObservableObject {
         buildInitialMsg()
     }
     
-    func fetchImages(for search: String) {        
-        if search != previousSearch {
-            isLoading = true
-            pageNumber = 0
-            images = []
-            fetch(search: search, page: pageNumber)
-        } else {
-            loadingNextPage = true
-            pageNumber += 1
-            fetch(search: search, page: pageNumber)
-        }
-        previousSearch = search
+    func fetchNewContent(of content: String) {
+        isLoading = true
+        previousSearch = content
+        pageNumber = 0
+        images = []
+        fetch(search: content, page: pageNumber)
     }
     
-    func loadMoreContent(id: String) {
-        if id == lastItemID {
-            fetchImages(for: previousSearch)
+    func fetchMoreContent(id: String) {
+        if userIsSeeingTheLastItem(id: id) {
+            pageNumber += 1
+            loadingNextPage = true
+            fetch(search: previousSearch, page: pageNumber)
         }
     }
     
@@ -49,29 +45,51 @@ class ImageViewModel: ObservableObject {
     
     private func fetch(search: String, page: Int) {
         ImgurAPI().fetchImages(for: search, page: page) { response in
-            self.isLoading = false
-            self.loadingNextPage = false
+            self.removeLoadingStates()
             
             if response.success {
-                let filteredImgs = response.images.filter { img in
-                    return img.is_album == false
-                }
-                self.lastItemID = filteredImgs.last?.id
-                
-                if self.images.isEmpty {
-                    self.images = filteredImgs
-                } else {
-                    self.images.append(contentsOf: filteredImgs)
-                }
-                
-                if self.images.isEmpty {
-                    self.buildErrorMsg(error: .searchFailed)
-                } else {
-                    self.showGallery = true
-                }
+                let filteredImgs = self.filterResponse(response: response.images)
+                self.updateLastItemID(id: filteredImgs.last?.id)
+                self.updateImagesArray(imgs: filteredImgs)
+                self.showSearchResult()
             } else {
                 self.buildErrorMsg(error: .generic)
             }
+        }
+    }
+    
+    private func userIsSeeingTheLastItem(id: String) -> Bool {
+        return id == lastItemID
+    }
+    
+    private func removeLoadingStates() {
+        self.isLoading = false
+        self.loadingNextPage = false
+    }
+    
+    private func filterResponse(response: [Img]) -> [Img] {
+        return response.filter { img in
+            return img.is_album == false
+        }
+    }
+    
+    private func updateLastItemID(id: String?) {
+        lastItemID = id
+    }
+    
+    private func updateImagesArray(imgs: [Img]) {
+        if images.isEmpty {
+            images = imgs
+        } else {
+            images.append(contentsOf: imgs)
+        }
+    }
+    
+    private func showSearchResult() {
+        if images.isEmpty {
+            buildErrorMsg(error: .searchFailed)
+        } else {
+            showGallery = true
         }
     }
     
