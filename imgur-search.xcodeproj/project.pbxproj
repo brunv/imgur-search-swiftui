@@ -32,6 +32,7 @@
 		1505D2F426E4EBDF00F5518F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1505D2F726E509B400F5518F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessage.swift; sourceTree = "<group>"; };
+		1505D2FE26E566B800F5518F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1566EE8626E38A5B000A6FC3 /* imgur-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchApp.swift; sourceTree = "<group>"; };
 		1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		1566EE7D26E38A5B000A6FC3 = {
 			isa = PBXGroup;
 			children = (
+				1505D2FE26E566B800F5518F /* README.md */,
 				1566EE8826E38A5B000A6FC3 /* imgur-search */,
 				1566EE8726E38A5B000A6FC3 /* Products */,
 			);
