@@ -28,7 +28,12 @@ struct HomeView: View {
                         .foregroundColor(.black)
                 })
             }.padding()
-            ImageGridView(images: imageViewModel.images)
+            
+            if !imageViewModel.showGallery {
+                LoadingIndicator(content: search)
+            } else {
+                ImageGridView(images: imageViewModel.images)
+            }
         }
     }
 }

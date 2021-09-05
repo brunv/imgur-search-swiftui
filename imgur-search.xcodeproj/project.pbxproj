@@ -12,6 +12,7 @@
 		1505D2F126E4392B00F5518F /* OpenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F026E4392B00F5518F /* OpenImageView.swift */; };
 		1505D2F326E4E6A300F5518F /* ImageThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */; };
 		1505D2F526E4EBDF00F5518F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F426E4EBDF00F5518F /* Main.swift */; };
+		1505D2F826E509B400F5518F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F726E509B400F5518F /* LoadingIndicator.swift */; };
 		1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */; };
 		1566EE8E26E38A5C000A6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */; };
 		1566EE9126E38A5C000A6FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		1505D2F026E4392B00F5518F /* OpenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenImageView.swift; sourceTree = "<group>"; };
 		1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumbnailView.swift; sourceTree = "<group>"; };
 		1505D2F426E4EBDF00F5518F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		1505D2F726E509B400F5518F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		1566EE8626E38A5B000A6FC3 /* imgur-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchApp.swift; sourceTree = "<group>"; };
 		1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,12 +72,21 @@
 		1505D2EB26E4017800F5518F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1505D2F626E5099C00F5518F /* Components */,
 				1566EEA326E3E72A000A6FC3 /* HomeView.swift */,
 				1566EEA126E3B2F0000A6FC3 /* ImageGridView.swift */,
 				1505D2F026E4392B00F5518F /* OpenImageView.swift */,
 				1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1505D2F626E5099C00F5518F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1505D2F726E509B400F5518F /* LoadingIndicator.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		1566EE7D26E38A5B000A6FC3 = {
@@ -205,6 +216,7 @@
 			files = (
 				1505D2F526E4EBDF00F5518F /* Main.swift in Sources */,
 				1505D2EF26E4106500F5518F /* ImageViewModel.swift in Sources */,
+				1505D2F826E509B400F5518F /* LoadingIndicator.swift in Sources */,
 				1566EE9A26E39444000A6FC3 /* ImageModel.swift in Sources */,
 				1505D2ED26E40F0C00F5518F /* ImgurAPI.swift in Sources */,
 				1566EEA426E3E72A000A6FC3 /* HomeView.swift in Sources */,
