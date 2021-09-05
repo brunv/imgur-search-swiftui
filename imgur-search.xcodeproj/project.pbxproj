@@ -3,23 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1505D2ED26E40F0C00F5518F /* ImgurAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2EC26E40F0C00F5518F /* ImgurAPI.swift */; };
+		1505D2EF26E4106500F5518F /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2EE26E4106500F5518F /* ImageViewModel.swift */; };
+		1505D2F126E4392B00F5518F /* OpenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F026E4392B00F5518F /* OpenImageView.swift */; };
+		1505D2F326E4E6A300F5518F /* ImageThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */; };
+		1505D2F526E4EBDF00F5518F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F426E4EBDF00F5518F /* Main.swift */; };
 		1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */; };
-		1566EE8C26E38A5B000A6FC3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE8B26E38A5B000A6FC3 /* ContentView.swift */; };
 		1566EE8E26E38A5C000A6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */; };
 		1566EE9126E38A5C000A6FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */; };
+		1566EE9A26E39444000A6FC3 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE9926E39444000A6FC3 /* ImageModel.swift */; };
+		1566EE9D26E39F0E000A6FC3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1566EE9C26E39F0E000A6FC3 /* Alamofire */; };
+		1566EEA026E3AF47000A6FC3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1566EE9F26E3AF47000A6FC3 /* SDWebImageSwiftUI */; };
+		1566EEA226E3B2F0000A6FC3 /* ImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EEA126E3B2F0000A6FC3 /* ImageGridView.swift */; };
+		1566EEA426E3E72A000A6FC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EEA326E3E72A000A6FC3 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1505D2EC26E40F0C00F5518F /* ImgurAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPI.swift; sourceTree = "<group>"; };
+		1505D2EE26E4106500F5518F /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		1505D2F026E4392B00F5518F /* OpenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenImageView.swift; sourceTree = "<group>"; };
+		1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumbnailView.swift; sourceTree = "<group>"; };
+		1505D2F426E4EBDF00F5518F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1566EE8626E38A5B000A6FC3 /* imgur-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchApp.swift; sourceTree = "<group>"; };
-		1566EE8B26E38A5B000A6FC3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1566EE9226E38A5C000A6FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1566EE9926E39444000A6FC3 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		1566EEA126E3B2F0000A6FC3 /* ImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridView.swift; sourceTree = "<group>"; };
+		1566EEA326E3E72A000A6FC3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,12 +43,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1566EEA026E3AF47000A6FC3 /* SDWebImageSwiftUI in Frameworks */,
+				1566EE9D26E39F0E000A6FC3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1505D2E926E4016900F5518F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1505D2EE26E4106500F5518F /* ImageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1505D2EA26E4017000F5518F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1505D2EC26E40F0C00F5518F /* ImgurAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1505D2EB26E4017800F5518F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1566EEA326E3E72A000A6FC3 /* HomeView.swift */,
+				1566EEA126E3B2F0000A6FC3 /* ImageGridView.swift */,
+				1505D2F026E4392B00F5518F /* OpenImageView.swift */,
+				1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1566EE7D26E38A5B000A6FC3 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +97,12 @@
 		1566EE8826E38A5B000A6FC3 /* imgur-search */ = {
 			isa = PBXGroup;
 			children = (
+				1505D2EB26E4017800F5518F /* Views */,
+				1505D2EA26E4017000F5518F /* Services */,
+				1505D2E926E4016900F5518F /* ViewModels */,
+				1566EE9826E39408000A6FC3 /* Model */,
 				1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */,
-				1566EE8B26E38A5B000A6FC3 /* ContentView.swift */,
+				1505D2F426E4EBDF00F5518F /* Main.swift */,
 				1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */,
 				1566EE9226E38A5C000A6FC3 /* Info.plist */,
 				1566EE8F26E38A5C000A6FC3 /* Preview Content */,
@@ -67,6 +116,14 @@
 				1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1566EE9826E39408000A6FC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1566EE9926E39444000A6FC3 /* ImageModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +142,10 @@
 			dependencies = (
 			);
 			name = "imgur-search";
+			packageProductDependencies = (
+				1566EE9C26E39F0E000A6FC3 /* Alamofire */,
+				1566EE9F26E3AF47000A6FC3 /* SDWebImageSwiftUI */,
+			);
 			productName = "imgur-search";
 			productReference = 1566EE8626E38A5B000A6FC3 /* imgur-search.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +173,10 @@
 				Base,
 			);
 			mainGroup = 1566EE7D26E38A5B000A6FC3;
+			packageReferences = (
+				1566EE9B26E39F0E000A6FC3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1566EE9E26E3AF47000A6FC3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 1566EE8726E38A5B000A6FC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1566EE8C26E38A5B000A6FC3 /* ContentView.swift in Sources */,
+				1505D2F526E4EBDF00F5518F /* Main.swift in Sources */,
+				1505D2EF26E4106500F5518F /* ImageViewModel.swift in Sources */,
+				1566EE9A26E39444000A6FC3 /* ImageModel.swift in Sources */,
+				1505D2ED26E40F0C00F5518F /* ImgurAPI.swift in Sources */,
+				1566EEA426E3E72A000A6FC3 /* HomeView.swift in Sources */,
+				1566EEA226E3B2F0000A6FC3 /* ImageGridView.swift in Sources */,
+				1505D2F326E4E6A300F5518F /* ImageThumbnailView.swift in Sources */,
+				1505D2F126E4392B00F5518F /* OpenImageView.swift in Sources */,
 				1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +398,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1566EE9B26E39F0E000A6FC3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		1566EE9E26E3AF47000A6FC3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1566EE9C26E39F0E000A6FC3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1566EE9B26E39F0E000A6FC3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1566EE9F26E3AF47000A6FC3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1566EE9E26E3AF47000A6FC3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1566EE7E26E38A5B000A6FC3 /* Project object */;
 }
