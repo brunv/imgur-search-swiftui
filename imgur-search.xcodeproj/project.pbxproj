@@ -13,6 +13,7 @@
 		1505D2F326E4E6A300F5518F /* ImageThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */; };
 		1505D2F526E4EBDF00F5518F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F426E4EBDF00F5518F /* Main.swift */; };
 		1505D2F826E509B400F5518F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F726E509B400F5518F /* LoadingIndicator.swift */; };
+		1505D2FB26E5111B00F5518F /* FeedbackMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */; };
 		1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */; };
 		1566EE8E26E38A5C000A6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */; };
 		1566EE9126E38A5C000A6FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		1505D2F226E4E6A300F5518F /* ImageThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThumbnailView.swift; sourceTree = "<group>"; };
 		1505D2F426E4EBDF00F5518F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		1505D2F726E509B400F5518F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessage.swift; sourceTree = "<group>"; };
 		1566EE8626E38A5B000A6FC3 /* imgur-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchApp.swift; sourceTree = "<group>"; };
 		1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1505D2F726E509B400F5518F /* LoadingIndicator.swift */,
+				1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				1566EEA426E3E72A000A6FC3 /* HomeView.swift in Sources */,
 				1566EEA226E3B2F0000A6FC3 /* ImageGridView.swift in Sources */,
 				1505D2F326E4E6A300F5518F /* ImageThumbnailView.swift in Sources */,
+				1505D2FB26E5111B00F5518F /* FeedbackMessage.swift in Sources */,
 				1505D2F126E4392B00F5518F /* OpenImageView.swift in Sources */,
 				1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */,
 			);
