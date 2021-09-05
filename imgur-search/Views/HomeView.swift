@@ -25,6 +25,7 @@ struct HomeView: View {
                     Image(systemName: "xmark")
                         .onTapGesture {
                             search = ""
+                            imageViewModel.clearSearch()
                         }
                     
                     Button(action: {

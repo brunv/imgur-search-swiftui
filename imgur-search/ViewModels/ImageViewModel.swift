@@ -43,6 +43,10 @@ class ImageViewModel: ObservableObject {
         }
     }
     
+    func clearSearch() {
+        buildInitialMsg()
+    }
+    
     private func fetch(search: String, page: Int) {
         ImgurAPI().fetchImages(for: search, page: page) { response in
             self.isLoading = false
