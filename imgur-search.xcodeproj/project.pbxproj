@@ -14,6 +14,8 @@
 		1505D2F526E4EBDF00F5518F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F426E4EBDF00F5518F /* Main.swift */; };
 		1505D2F826E509B400F5518F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2F726E509B400F5518F /* LoadingIndicator.swift */; };
 		1505D2FB26E5111B00F5518F /* FeedbackMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */; };
+		1505D30626E5825400F5518F /* imgur_searchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D30526E5825400F5518F /* imgur_searchTests.swift */; };
+		1505D31426E5867300F5518F /* imgur_searchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1505D31326E5867300F5518F /* imgur_searchUITests.swift */; };
 		1566EE8A26E38A5B000A6FC3 /* imgur_searchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */; };
 		1566EE8E26E38A5C000A6FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */; };
 		1566EE9126E38A5C000A6FC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1566EE9026E38A5C000A6FC3 /* Preview Assets.xcassets */; };
@@ -24,6 +26,23 @@
 		1566EEA426E3E72A000A6FC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EEA326E3E72A000A6FC3 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1505D30826E5825400F5518F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1566EE7E26E38A5B000A6FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1566EE8526E38A5B000A6FC3;
+			remoteInfo = "imgur-search";
+		};
+		1505D31626E5867300F5518F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1566EE7E26E38A5B000A6FC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1566EE8526E38A5B000A6FC3;
+			remoteInfo = "imgur-search";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1505D2EC26E40F0C00F5518F /* ImgurAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPI.swift; sourceTree = "<group>"; };
 		1505D2EE26E4106500F5518F /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
@@ -33,6 +52,12 @@
 		1505D2F726E509B400F5518F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		1505D2FA26E5111B00F5518F /* FeedbackMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessage.swift; sourceTree = "<group>"; };
 		1505D2FE26E566B800F5518F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1505D30326E5825400F5518F /* imgur-searchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "imgur-searchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1505D30526E5825400F5518F /* imgur_searchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchTests.swift; sourceTree = "<group>"; };
+		1505D30726E5825400F5518F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1505D31126E5867300F5518F /* imgur-searchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "imgur-searchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1505D31326E5867300F5518F /* imgur_searchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchUITests.swift; sourceTree = "<group>"; };
+		1505D31526E5867300F5518F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1566EE8626E38A5B000A6FC3 /* imgur-search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1566EE8926E38A5B000A6FC3 /* imgur_searchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_searchApp.swift; sourceTree = "<group>"; };
 		1566EE8D26E38A5C000A6FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +69,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1505D30026E5825400F5518F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1505D30E26E5867300F5518F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1566EE8326E38A5B000A6FC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,11 +132,31 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		1505D30426E5825400F5518F /* imgur-searchTests */ = {
+			isa = PBXGroup;
+			children = (
+				1505D30526E5825400F5518F /* imgur_searchTests.swift */,
+				1505D30726E5825400F5518F /* Info.plist */,
+			);
+			path = "imgur-searchTests";
+			sourceTree = "<group>";
+		};
+		1505D31226E5867300F5518F /* imgur-searchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1505D31326E5867300F5518F /* imgur_searchUITests.swift */,
+				1505D31526E5867300F5518F /* Info.plist */,
+			);
+			path = "imgur-searchUITests";
+			sourceTree = "<group>";
+		};
 		1566EE7D26E38A5B000A6FC3 = {
 			isa = PBXGroup;
 			children = (
 				1505D2FE26E566B800F5518F /* README.md */,
 				1566EE8826E38A5B000A6FC3 /* imgur-search */,
+				1505D30426E5825400F5518F /* imgur-searchTests */,
+				1505D31226E5867300F5518F /* imgur-searchUITests */,
 				1566EE8726E38A5B000A6FC3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				1566EE8626E38A5B000A6FC3 /* imgur-search.app */,
+				1505D30326E5825400F5518F /* imgur-searchTests.xctest */,
+				1505D31126E5867300F5518F /* imgur-searchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +206,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1505D30226E5825400F5518F /* imgur-searchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1505D30A26E5825400F5518F /* Build configuration list for PBXNativeTarget "imgur-searchTests" */;
+			buildPhases = (
+				1505D2FF26E5825400F5518F /* Sources */,
+				1505D30026E5825400F5518F /* Frameworks */,
+				1505D30126E5825400F5518F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1505D30926E5825400F5518F /* PBXTargetDependency */,
+			);
+			name = "imgur-searchTests";
+			productName = "imgur-searchTests";
+			productReference = 1505D30326E5825400F5518F /* imgur-searchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1505D31026E5867300F5518F /* imgur-searchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1505D31826E5867300F5518F /* Build configuration list for PBXNativeTarget "imgur-searchUITests" */;
+			buildPhases = (
+				1505D30D26E5867300F5518F /* Sources */,
+				1505D30E26E5867300F5518F /* Frameworks */,
+				1505D30F26E5867300F5518F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1505D31726E5867300F5518F /* PBXTargetDependency */,
+			);
+			name = "imgur-searchUITests";
+			productName = "imgur-searchUITests";
+			productReference = 1505D31126E5867300F5518F /* imgur-searchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1566EE8526E38A5B000A6FC3 /* imgur-search */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1566EE9526E38A5C000A6FC3 /* Build configuration list for PBXNativeTarget "imgur-search" */;
@@ -175,6 +272,14 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					1505D30226E5825400F5518F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1566EE8526E38A5B000A6FC3;
+					};
+					1505D31026E5867300F5518F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 1566EE8526E38A5B000A6FC3;
+					};
 					1566EE8526E38A5B000A6FC3 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -198,11 +303,27 @@
 			projectRoot = "";
 			targets = (
 				1566EE8526E38A5B000A6FC3 /* imgur-search */,
+				1505D30226E5825400F5518F /* imgur-searchTests */,
+				1505D31026E5867300F5518F /* imgur-searchUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1505D30126E5825400F5518F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1505D30F26E5867300F5518F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1566EE8426E38A5B000A6FC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,6 +336,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1505D2FF26E5825400F5518F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1505D30626E5825400F5518F /* imgur_searchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1505D30D26E5867300F5518F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1505D31426E5867300F5518F /* imgur_searchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1566EE8226E38A5B000A6FC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,7 +372,94 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1505D30926E5825400F5518F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1566EE8526E38A5B000A6FC3 /* imgur-search */;
+			targetProxy = 1505D30826E5825400F5518F /* PBXContainerItemProxy */;
+		};
+		1505D31726E5867300F5518F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1566EE8526E38A5B000A6FC3 /* imgur-search */;
+			targetProxy = 1505D31626E5867300F5518F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1505D30B26E5825400F5518F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "imgur-searchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brunovieira.imgur-searchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imgur-search.app/imgur-search";
+			};
+			name = Debug;
+		};
+		1505D30C26E5825400F5518F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "imgur-searchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brunovieira.imgur-searchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imgur-search.app/imgur-search";
+			};
+			name = Release;
+		};
+		1505D31926E5867300F5518F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "imgur-searchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brunovieira.imgur-searchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "imgur-search";
+			};
+			name = Debug;
+		};
+		1505D31A26E5867300F5518F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "imgur-searchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brunovieira.imgur-searchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "imgur-search";
+			};
+			name = Release;
+		};
 		1566EE9326E38A5C000A6FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,6 +621,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1505D30A26E5825400F5518F /* Build configuration list for PBXNativeTarget "imgur-searchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1505D30B26E5825400F5518F /* Debug */,
+				1505D30C26E5825400F5518F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1505D31826E5867300F5518F /* Build configuration list for PBXNativeTarget "imgur-searchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1505D31926E5867300F5518F /* Debug */,
+				1505D31A26E5867300F5518F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1566EE8126E38A5B000A6FC3 /* Build configuration list for PBXProject "imgur-search" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

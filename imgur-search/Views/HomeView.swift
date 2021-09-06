@@ -22,18 +22,21 @@ struct HomeView: View {
                 TextField("Search...", text: $search)
                 
                 if !search.isEmpty {
-                    Image(systemName: "xmark")
-                        .onTapGesture {
-                            search = ""
-                            imageViewModel.clearSearch()
-                        }
+                    Button(action: {
+                        search = ""
+                        imageViewModel.clearSearch()
+                    }, label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.black)
+                    })
                     
                     Button(action: {
                         imageViewModel.fetchNewContent(of: self.search)
                     }, label: {
-                        Text("     GO")
+                        Text("GO")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.black)
+                            .padding(.leading)
                     })
                 }
                 
