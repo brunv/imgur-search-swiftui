@@ -19,9 +19,9 @@ struct ImageThumbnailView: View {
                 .resizable()
                 .indicator(.activity)
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                .frame(width: 80, height: 80)
+                .frame(width: (UIScreen.main.bounds.width - 60) / 4, height:  (UIScreen.main.bounds.width - 60) / 4)
                 .clipped()
-                .cornerRadius(8)
+                .cornerRadius(5)
                 .onAppear() {
                     self.loadMoreCallback(id)
                 }
